@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="InteractionCollectionViewCell" customModule="TwitterPrototype" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRU-ou-sd7">
+                        <rect key="frame" x="15" y="0.0" width="131.5" height="40"/>
+                        <state key="normal" image="like"/>
+                        <connections>
+                            <action selector="likeClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="9eU-dS-dq9"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aul-cl-h02">
+                        <rect key="frame" x="154.5" y="0.0" width="131" height="40"/>
+                        <state key="normal" image="comment"/>
+                        <connections>
+                            <action selector="commentClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="IHT-0f-XKT"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPW-h1-IaO">
+                        <rect key="frame" x="293.5" y="0.0" width="131.5" height="40"/>
+                        <state key="normal" image="more"/>
+                        <connections>
+                            <action selector="shareClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="339-Ck-esC"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="wRU-ou-sd7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="1bE-vD-23U"/>
+                <constraint firstItem="Aul-cl-h02" firstAttribute="width" secondItem="wRU-ou-sd7" secondAttribute="width" id="G3z-tR-Qz0"/>
+                <constraint firstAttribute="bottom" secondItem="Aul-cl-h02" secondAttribute="bottom" id="GPW-Bd-J7L"/>
+                <constraint firstItem="wRU-ou-sd7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="IUS-v0-pjv"/>
+                <constraint firstItem="aPW-h1-IaO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Sh1-Ta-RcJ"/>
+                <constraint firstAttribute="trailing" secondItem="aPW-h1-IaO" secondAttribute="trailing" constant="15" id="cjS-Mr-ggs"/>
+                <constraint firstAttribute="bottom" secondItem="aPW-h1-IaO" secondAttribute="bottom" id="coR-Os-dya"/>
+                <constraint firstItem="wRU-ou-sd7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dvO-7Y-ZAO"/>
+                <constraint firstAttribute="bottom" secondItem="wRU-ou-sd7" secondAttribute="bottom" id="kDF-H0-NxC"/>
+                <constraint firstItem="aPW-h1-IaO" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ktE-zm-ubF"/>
+                <constraint firstItem="aPW-h1-IaO" firstAttribute="width" secondItem="wRU-ou-sd7" secondAttribute="width" id="mae-KG-v0Y"/>
+                <constraint firstItem="aPW-h1-IaO" firstAttribute="leading" secondItem="Aul-cl-h02" secondAttribute="trailing" constant="8" id="nqC-Mn-EIo"/>
+                <constraint firstItem="Aul-cl-h02" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="nyu-gR-BIU"/>
+                <constraint firstItem="Aul-cl-h02" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oD2-kr-nnM"/>
+                <constraint firstItem="Aul-cl-h02" firstAttribute="leading" secondItem="wRU-ou-sd7" secondAttribute="trailing" constant="8" id="uUu-Pk-dVw"/>
+            </constraints>
+            <size key="customSize" width="440" height="36"/>
+            <point key="canvasLocation" x="136" y="141"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="comment" width="24" height="22"/>
+        <image name="like" width="23" height="21"/>
+        <image name="more" width="38" height="38"/>
+    </resources>
+</document>
